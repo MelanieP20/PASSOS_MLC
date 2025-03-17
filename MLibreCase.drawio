@@ -16,10 +16,10 @@
         <mxCell id="zhMCmTsx-m8ue4kPbWXv-4" value="t_customer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="150" y="400" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="zhMCmTsx-m8ue4kPbWXv-5" value="vw_cumpleaneros_ventas" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="87" y="200" width="140" height="30" as="geometry" />
+        <mxCell id="zhMCmTsx-m8ue4kPbWXv-5" value="vw_birthday_customer_sales" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="87" y="200" width="163" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="zhMCmTsx-m8ue4kPbWXv-6" value="vw_vededores_top5_celulares" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="zhMCmTsx-m8ue4kPbWXv-6" value="vw_top5_cellphone_sellers" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="360" y="200" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zhMCmTsx-m8ue4kPbWXv-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="zhMCmTsx-m8ue4kPbWXv-5" target="zhMCmTsx-m8ue4kPbWXv-5">
@@ -55,7 +55,7 @@
             <mxPoint x="330" y="360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zhMCmTsx-m8ue4kPbWXv-13" value="vw_reprocesar_hitorial_item" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="zhMCmTsx-m8ue4kPbWXv-13" value="vw_reprocess_item_history" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="110" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zhMCmTsx-m8ue4kPbWXv-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="zhMCmTsx-m8ue4kPbWXv-3" target="zhMCmTsx-m8ue4kPbWXv-6">
@@ -67,7 +67,7 @@
         <mxCell id="zhMCmTsx-m8ue4kPbWXv-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zhMCmTsx-m8ue4kPbWXv-16" target="zhMCmTsx-m8ue4kPbWXv-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="zhMCmTsx-m8ue4kPbWXv-16" value="usp_reprocesar_hitorial_item" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="zhMCmTsx-m8ue4kPbWXv-16" value="usp_reprocess_item_history" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="200" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zhMCmTsx-m8ue4kPbWXv-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="zhMCmTsx-m8ue4kPbWXv-3" target="zhMCmTsx-m8ue4kPbWXv-16">
