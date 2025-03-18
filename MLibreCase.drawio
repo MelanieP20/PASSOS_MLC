@@ -76,12 +76,6 @@
             <mxPoint x="330" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zhMCmTsx-m8ue4kPbWXv-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" source="zhMCmTsx-m8ue4kPbWXv-1" target="zhMCmTsx-m8ue4kPbWXv-16" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="240" as="sourcePoint" />
-            <mxPoint x="330" y="190" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="zhMCmTsx-m8ue4kPbWXv-19" value="t_payment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="10" y="400" width="110" height="30" as="geometry" />
         </mxCell>
