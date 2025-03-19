@@ -155,3 +155,51 @@ BEGIN
   RETURN 'Histórico inserido com sucesso';
 END;
 $$;
+
+--------------------------------------------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE usp_item_status_history()
+  RETURNS STRING
+  LANGUAGE SQL
+  EXECUTE AS OWNER
+AS
+$$
+BEGIN
+  -- Inserir histórico para todos os itens na t_item, se ainda não existe na t_item_status_history
+  INSERT INTO t_item_status_history (item_id, price, status, record_date)
+  SELECT
+    item_id,
+    unite_price AS price,
+    item_status AS status,
+    CREATED_AT AS record_date
+  FROM
+    melanie_db.mlc.t_item
+  WHERE
+    NOT EXISTS (
+      SELECT 1
+      FROM t_item_status_history
+    );
+
+  -- Inserir histórico de itens atualizados (preço ou status alterado)
+  INSERT INTO t_item_status_history (item_id, price, status, record_date)
+  SELECT
+    item_id,
+    unite_price AS price,
+    item_status AS status,
+    CREATED_AT AS record_date
+  FROM
+    melanie_db.mlc.t_item
+  WHERE
+    EXISTS (
+      SELECT 1
+      FROM t_item_status_history
+      WHERE t_item_status_history.item_id = t_item.item_id
+      AND (
+        t_item_status_history.price != t_item.unite_price OR
+        t_item_status_history.status != t_item.item_status
+      )
+    );
+
+  RETURN 'Histórico inserido com sucesso';
+END;
+$$;
+

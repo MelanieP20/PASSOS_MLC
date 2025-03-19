@@ -63,7 +63,6 @@ CREATE OR REPLACE TABLE t_item(
 );
 
 CREATE OR REPLACE TABLE t_item_status_history (
-    history_id INT PRIMARY KEY,  -- unique history id 
     item_id INT NOT NULL, -- unique item identifier
     price DECIMAL(10,2) NOT NULL, --item price in the register moment
     status VARCHAR(50) NOT NULL, --item status for example: active, inactive
