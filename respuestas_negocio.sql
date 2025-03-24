@@ -30,7 +30,7 @@ order_cte AS (
         SUM(total_price) AS total_order_price  -- Summing the total price of completed orders for each customer
     FROM melanie_db.mlc.t_order
     -- Filter orders completed in January 2020
-    WHERE TO_CHAR(order_date, 'YYYYMM') = '202001' AND order_status = 'completed'
+    WHERE TO_CHAR(order_date, 'YYYY-MM') = '2020-01' AND order_status = 'completed'
     GROUP BY user_id   -- Group by user_id to get the total for each customer
 ),
 
@@ -42,7 +42,7 @@ payment_cte AS (
         SUM(amount) AS total_payment_amount  -- Summing the total amount paid by each customer
     FROM melanie_db.mlc.t_payment
     -- Filter payments with the status 'paid'
-    WHERE payment_status = 'paid'
+    WHERE TO_CHAR(payment_date, 'YYYY-MM') = '2020-01' and payment_status = 'paid' 
     GROUP BY user_id   -- Group by user_id to get the total payment amount for each customer
 ),
 
@@ -98,7 +98,6 @@ order_cte AS (
 payment_cte AS (
     SELECT
         user_id,                                     -- Unique identifier for the customer
-        payment_id,                                  -- Unique identifier for each payment
         LISTAGG(payment_method, ',') WITHIN GROUP (ORDER BY payment_id) as payment_methods,  -- Aggregate distinct payment methods into a list
         TO_CHAR(payment_date, 'YYYY-MM') AS payment_date_by_month,  -- Convert payment date to 'YYYY-MM' format
         payment_status,                               -- Status of the payment (e.g., paid, pending)
@@ -106,7 +105,7 @@ payment_cte AS (
     FROM melanie_db.mlc.t_payment p
     -- Filter payments to include only those with a 'paid' status
     WHERE p.payment_status = 'paid'
-    GROUP BY user_id, payment_id, payment_date_by_month, payment_status  -- Group by customer, payment, and payment date
+    GROUP BY user_id, payment_date_by_month, payment_status  -- Group by customer, payment status, and payment date
 ),
 
 -- Define a CTE to retrieve item category details
